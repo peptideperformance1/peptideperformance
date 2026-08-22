@@ -319,7 +319,11 @@
 
   </footer>
 
-  <script src="script.js"></script>
+  <!-- VISIBILITY FIX -->
+<script>
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    el.classList.add('visible');
+  });
+</script>
 
-</body>
-</html>
+<script src="script.js"></script>
