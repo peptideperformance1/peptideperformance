@@ -1558,3 +1558,95 @@ details p { color: var(--muted); padding: 0 24px 22px; margin: 0; }
   }
 
 }
+/* =========================================
+   SITE-WIDE MOBILE FIX
+   ========================================= */
+
+@media (max-width: 650px) {
+
+  /* Prevent fixed header from covering content */
+  body {
+    padding-top: 0;
+    overflow-x: hidden;
+  }
+
+  main {
+    overflow: hidden;
+  }
+
+  /* Header / navigation */
+  .site-header {
+    position: relative;
+  }
+
+  .header-inner {
+    min-height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  /* Give hero sections proper breathing room */
+  .hero,
+  .research-hero,
+  .materials-hero {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* Keep large headings inside phone screen */
+  h1,
+  .hero h1,
+  .research-hero h1,
+  .materials-hero h1 {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+    line-height: 0.95;
+  }
+
+  /* Stack grids/cards vertically */
+  .home-hub-grid,
+  .research-library-grid,
+  .materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Fix card spacing */
+  .home-hub-card,
+  .research-topic-card,
+  .materials-card {
+    min-height: 0;
+    margin-bottom: 18px;
+  }
+
+  /* Remove accidental link underlines */
+  .home-hub-card,
+  .research-topic-card,
+  .materials-card,
+  .home-hub-card:hover,
+  .research-topic-card:hover,
+  .materials-card:hover {
+    text-decoration: none;
+  }
+
+  /* Keep numbered labels in normal position */
+  .home-hub-number,
+  .research-topic-number,
+  .materials-number {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  /* Prevent bottom buttons/bars covering content */
+  .mobile-order-bar,
+  .ordering-bar {
+    position: relative;
+    bottom: auto;
+  }
+
+  /* Extra room at bottom of pages */
+  main {
+    padding-bottom: 40px;
+  }
+
+}
