@@ -817,5 +817,137 @@ details p { color: var(--muted); padding: 0 24px 22px; margin: 0; }
   .home-photo-after img {
     object-position: center center;
   }
+/* =========================================================
+   HOMEPAGE INTERACTIVE HUB
+   ========================================================= */
 
+.home-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.home-hub-card {
+  position: relative;
+  min-height: 330px;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+
+  text-decoration: none;
+  color: inherit;
+
+  border: 1px solid rgba(78, 179, 255, 0.22);
+  border-radius: 16px;
+
+  background:
+    radial-gradient(circle at 90% 10%, rgba(0, 157, 255, 0.12), transparent 35%),
+    linear-gradient(145deg, rgba(12, 29, 47, 0.96), rgba(5, 14, 25, 0.94));
+
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.28);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.home-hub-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(56, 190, 255, 0.62);
+
+  background:
+    radial-gradient(circle at 90% 10%, rgba(0, 157, 255, 0.2), transparent 38%),
+    linear-gradient(145deg, rgba(15, 37, 61, 0.98), rgba(5, 15, 27, 0.96));
+
+  box-shadow:
+    0 28px 75px rgba(0, 0, 0, 0.38),
+    0 0 35px rgba(0, 145, 255, 0.1);
+}
+
+.home-hub-number {
+  color: var(--blue-2);
+
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+
+  letter-spacing: 0.12em;
+}
+
+.home-hub-card h3 {
+  margin: 7px 0 16px;
+
+  font-size: clamp(2rem, 3.5vw, 3.1rem);
+}
+
+.home-hub-card p:not(.eyebrow) {
+  margin: 0;
+
+  max-width: 530px;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.home-hub-link {
+  display: inline-flex;
+  align-items: center;
+
+  color: var(--blue-2);
+
+  font-size: 0.9rem;
+  font-weight: 900;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  transition: transform 0.2s ease;
+}
+
+.home-hub-card:hover .home-hub-link {
+  transform: translateX(5px);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .home-hub-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hub-card {
+    min-height: 270px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+  .home-hub-grid {
+    gap: 14px;
+  }
+
+  .home-hub-card {
+    min-height: 0;
+    padding: 26px 22px;
+    gap: 22px;
+  }
+
+  .home-hub-card h3 {
+    font-size: 2.3rem;
+  }
+
+}
 }
