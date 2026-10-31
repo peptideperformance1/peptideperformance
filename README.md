@@ -35,7 +35,7 @@ The website uses a black, orange, and white design and is optimized for desktop 
 
 **BUILT50:** Fitness, training, and community.
 
-**Discord:** https://discord.gg/88WBGr8kv
+**Discord:** https://discord.gg/DQJaktwaTd
 
 ## Maintenance
 
